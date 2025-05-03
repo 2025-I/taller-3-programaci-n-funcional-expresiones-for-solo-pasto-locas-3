@@ -134,7 +134,7 @@ class TestTrenes {
   @Test
   def pruebaMediana(): Unit = {
     val estadoInicial = (List.range(1, 501), Nil, Nil)
-    val movimientos = List.fill(500)(Uno(1))  // Cambiado de -1 a 1
+    val movimientos = List.fill(500)(Uno(1))  // Cambiaado de -1 a 1
     val estados = objAplicarMovs.aplicarMovimientos(estadoInicial, movimientos)
     assertEquals(500, estados.last._2.size)  // Verifica que hay 500 elementos en la vía uno
   }
