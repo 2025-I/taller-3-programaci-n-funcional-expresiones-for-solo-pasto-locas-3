@@ -18,6 +18,7 @@ class definirManiobra {
             mov <- actual.headOption.map(_ => Uno(1)) orElse {
               if (uno.nonEmpty && uno.head == objetivo.head) Some(Uno(-1))
               else if (dos.nonEmpty && dos.head == objetivo.head) Some(Dos(-1))
+              else if (uno.nonEmpty) Some(Dos(uno.length))
               else None
             }
             nextState = mov match {
@@ -47,6 +48,6 @@ class definirManiobra {
       List(Uno(t1.length), Dos(t1.length), Uno(-t1.length), Dos(-t1.length))
     } else {
       construir(t1, t2, Nil, Nil, Nil)
+      }
     }
-  }
 }
