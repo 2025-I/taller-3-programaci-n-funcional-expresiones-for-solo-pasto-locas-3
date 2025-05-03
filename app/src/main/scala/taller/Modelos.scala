@@ -5,7 +5,7 @@ object Modelos {
   /** Tipo que representa un vagón de tren. */
   type Vagon = Any
 
-  /** Un tren es una lista de vagones. */
+  /** Un tren es una listaa de vagones. */
   type Tren = List[Vagon]
 
   /** Estado del sistema: (en la vía principal, en la vía uno, en la vía dos). */
